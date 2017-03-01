@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Promise</title>
+  </head>
+  <body>
+    <span>Paloma foi trabalhar, me fez prometer que iria arrumar a casa<small></span>
+    <button id="btn">Arrumar a casa!</button>
+    <div id="log"></div>
+    <script src="aspirar.js"></script>
+    <script src="passar-pano.js"></script>
+    <script src="lavar-banheiro.js"></script>
+    <script src="promessa.js"></script>
+  </body>
+  <script>
+  if ("Promise" in window) {
+    btn = document.getElementById("btn");
+     btn.addEventListener("click",promessaArrumarCasa);
+     log = document.getElementById('log');
+     log.innerHTML = "Navegador suportado e adicionado a promessa ao botão.<br/>";
+  }
+  else {
+    log = document.getElementById('log');
+    log.innerHTML = "Navegador não suporta promessas.";
+  }
+  </script>
+</html>

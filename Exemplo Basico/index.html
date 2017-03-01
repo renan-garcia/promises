@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Promise</title>
+  </head>
+  <body>
+    <span>Tempo de espera da promessa<small>(em segundos)</small></span>
+    <input type="int" id="segundos" value="5" /><br />
+    <button id="btn">Faça uma promessa!</button>
+    <div id="log"></div>
+    <script src="promessa.js"></script>
+  </body>
+  <script>
+  if ("Promise" in window) {
+    btn = document.getElementById("btn");
+     btn.addEventListener("click",promessaDeTeste);
+     log = document.getElementById('log');
+     log.innerHTML = "Navegador suportado e adicionado a promessa ao botão.<br/>";
+  }
+  else {
+    log = document.getElementById('log');
+    log.innerHTML = "Navegador não suporta promessas.";
+  }
+  </script>
+</html>
